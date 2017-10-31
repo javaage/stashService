@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <classPathEntry location="C:\Users\p9030576\.m2\repository\postgresql\postgresql\9.1-901-1.jdbc4\postgresql-9.1-901-1.jdbc4.jar" />
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/booking" driverClass="org.postgresql.Driver" password="19786028" userId="postgres" />
+    <javaModelGenerator targetPackage="com.ge.predix.booking.model" targetProject="bookingService" />
+    <sqlMapGenerator targetPackage="com.ge.predix.booking.mapper" targetProject="bookingService" />
+    <javaClientGenerator targetPackage="com.ge.predix.booking.mapper" targetProject="bookingService" type="XMLMAPPER" />
+
+    <table schema="public" tableName="t001_role" domainObjectName="RoleModel">
+    <generatedKey column="n_role_id" sqlStatement="SELECT nextval('t001_role_n_role_id_seq')" identity="true"/>
+      <columnOverride column="n_role_id" property="roleID"  javaType="int"/>
+      <columnOverride column="c_role_name" property="name" />
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+    </table>
+    <table schema="public" tableName="t002_user" domainObjectName="UserModel">
+      <columnOverride column="c_user_id" property="userName" />
+      <columnOverride column="c_uaa_id" property="UAAID" />
+      <columnOverride column="n_active" property="active" />
+      <columnOverride column="n_role_id" property="roleID"  javaType="int"/>
+      <columnOverride column="n_region_id" property="regionID"  javaType="int"/>
+      <columnOverride column="c_region_group" property="regionGroup" />
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+      <columnOverride column="c_phone_no" property="phoneNo" />
+      <columnOverride column="c_email" property="email" />
+      <columnOverride column="c_organization" property="organization"  />
+      <columnOverride column="c_name" property="name"  />
+      <columnOverride column="c_contact" property="contactPerson"  />
+      <columnOverride column="c_buyer_relation" property="buyerMappingRelation"  />
+      <columnOverride column="c_buyer_person" property="buyerContactPerson"  />
+      <columnOverride column="c_buyer_phone" property="buyerPhoneNumber"  />
+      <columnOverride column="c_goods_helper" property="goodsHelper"  />
+    </table>
+
+    <table schema="public" tableName="t003_booking" domainObjectName="BookingModel">
+    <generatedKey column="n_booking_id" sqlStatement="SELECT nextval('t003_booking_n_booking_id_seq')" identity="true" />
+      <columnOverride column="n_booking_id" property="booking"  javaType="int"/>
+      <columnOverride column="c_user_id" property="userName" />
+      <columnOverride column="n_region_id" property="regionID"  javaType="int"/>
+      <columnOverride column="c_asn_n0" property="ASN" />
+      <columnOverride column="n_quantity" property="quantity"  javaType="int"/>
+      <columnOverride column="d_start_time" property="startTime" />
+      <columnOverride column="d_end_time" property="endTime" />
+      <columnOverride column="n_status" property="status" javaType="int"/>
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+      <columnOverride column="n_dock_id" property="dockID" javaType="int"/>
+      <columnOverride column="c_po_no" property="PO" />
+      <columnOverride column="c_part_no" property="partNo" />
+      <columnOverride column="c_awb" property="AWB" />
+      <columnOverride column="c_rate" property="rate" />
+      <columnOverride column="c_receiver" property="receiver"  />
+      <columnOverride column="d_receive_date" property="receiverDate" />
+      <columnOverride column="c_exception" property="exception"  />
+      <columnOverride column="c_comment" property="comment"  />
+      <columnOverride column="c_delivery_status" property="deliveryStatus"  />
+      <columnOverride column="c_delivery_detail" property="deliveryDetailStatus"  />
+      <columnOverride column="c_abnormal" property="abnormalBookingStatus"  />
+      <columnOverride column="c_abnormal_detail" property="abnormalBookingDetailStatus"  />
+      
+      <columnOverride column="d_enter_time" property="enterTime" />
+      <columnOverride column="d_exit_time" property="exitTime" />
+      <columnOverride column="c_enter_operator" property="enterOperator" />
+      <columnOverride column="c_exit_operator" property="exitOperator" />
+      <columnOverride column="n_booking_identifier" property="bookingIdentifier" />
+      <columnOverride column="c_assign_id" property="assignID" />
+    </table>
+
+    <table schema="public" tableName="t004_setting" domainObjectName="SettingModel">
+    <generatedKey column="n_setting_id" sqlStatement="SELECT nextval('t004_setting_n_setting_id_seq')" identity="true" />
+      <columnOverride column="n_setting_id" property="settingID" javaType="int" />
+      <columnOverride column="c_key" property="key" />
+      <columnOverride column="c_value" property="value" />
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+    </table>
+    
+    <table schema="public" tableName="t005_log" domainObjectName="LogModel">
+    <generatedKey column="n_log_id" sqlStatement="SELECT nextval('t005_log_n_log_id_seq')" identity="true" />
+      <columnOverride column="n_log_id" property="logID" javaType="int" />
+      <columnOverride column="c_user_id" property="userName" />
+      <columnOverride column="c_log" property="log" />
+      <columnOverride column="d_log_date" property="logDate" />
+      <columnOverride column="n_booking_id" property="bookingID" javaType="int" />
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+    </table>
+    
+    <table schema="public" tableName="t006_region" domainObjectName="RegionModel">
+    <generatedKey column="n_region_id" sqlStatement="SELECT nextval('t006_region_n_region_id_seq')" identity="true" />
+      <columnOverride column="n_region_id" property="regionID" javaType="int" />
+      <columnOverride column="c_region" property="region" />
+      <columnOverride column="c_location_code" property="location" />
+      <columnOverride column="c_region_name" property="regionName" />
+      <columnOverride column="n_status" property="status" javaType="int" />
+      <columnOverride column="c_image_data" property="imageData" />
+    </table>
+    
+    <table schema="public" tableName="t007_relation" domainObjectName="RelationModel">
+      <columnOverride column="c_user_id" property="userName" />
+      <columnOverride column="n_region_id" property="regionID"  javaType="int"/>
+      <columnOverride column="d_created_date" property="createDate" />
+      <columnOverride column="c_created_operator" property="createOperator" />
+      <columnOverride column="d_last_modify_date" property="modifyDate" />
+      <columnOverride column="c_last_modify_operator" property="modifyOperator" />
+      <columnOverride column="c_contact" property="contactPerson"  />
+      <columnOverride column="c_buyer_relation" property="buyerMappingRelation"  />
+      <columnOverride column="c_buyer_person" property="buyerContactPerson"  />
+      <columnOverride column="c_buyer_phone" property="buyerPhoneNumber"  />
+    </table>
+  </context>
+</generatorConfiguration>

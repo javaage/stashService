@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="C:\Users\p9030576\.m2\repository\postgresql\postgresql\9.1-901-1.jdbc4\postgresql-9.1-901-1.jdbc4.jar" />
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:postgresql://localhost:5432/popular" driverClass="org.postgresql.Driver" password="19786028" userId="postgres" />
+    <javaModelGenerator targetPackage="com.stash.model" targetProject="stashService" />
+    <sqlMapGenerator targetPackage="com.stash.mapper" targetProject="stashService" />
+    <javaClientGenerator targetPackage="com.stash.mapper" targetProject="stashService" type="XMLMAPPER" />
+
+    <table schema="public" tableName="allstock" domainObjectName="AllStockModel">
+      <columnOverride column="code" property="code" />
+      <columnOverride column="name" property="name" />
+      <columnOverride column="py" property="py" />
+      <columnOverride column="industry" property="industry" />
+      <columnOverride column="pe" property="pe" />
+      <columnOverride column="pb" property="pb" />
+      <columnOverride column="totalvalue" property="totalvalue" />
+      <columnOverride column="currency" property="currency" />
+    </table>
+    
+    <table schema="public" tableName="attend" domainObjectName="AttendModel">
+       <columnOverride column="code" property="code" />
+	  <columnOverride column="name" property="name" />
+	  <columnOverride column="time" property="time" />
+	  <columnOverride column="trans" property="trans" />
+	  <columnOverride column="signal" property="signal" />
+	  <columnOverride column="ascrate" property="ascrate" />
+	  <columnOverride column="descrate" property="descrate" />
+	  <columnOverride column="equalrate" property="equalrate" />
+    </table>
+
+    <table schema="public" tableName="bkrecord" domainObjectName="BkrecordModel">
+         <columnOverride column="id" property="id" />
+		  <columnOverride column="code" property="code" />
+		  <columnOverride column="name" property="name" />
+		  <columnOverride column="increase" property="increase" />
+		  <columnOverride column="date" property="date" />
+		  <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="bk_trans" domainObjectName="BkTransModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="increase" property="increase" />
+		 <columnOverride column="trans" property="trans" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="candidate" domainObjectName="BkTransModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="preflist" property="preflist" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="cand_rate" domainObjectName="CandRateModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="a" property="a" />
+		 <columnOverride column="b" property="b" />
+		 <columnOverride column="r" property="r" />
+		 <columnOverride column="increase" property="increase" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="cand_trans" domainObjectName="CandTransModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="increase" property="increase" />
+		 <columnOverride column="trans" property="trans" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="category" domainObjectName="CategoryModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="type" property="type" />
+		 <columnOverride column="content" property="content" />
+    </table>
+
+	<table schema="public" tableName="collect" domainObjectName="CollectModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="flag" property="flag" />
+    </table>
+
+	<table schema="public" tableName="crecord" domainObjectName="CrecordModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="increase" property="increase" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="c_trans" domainObjectName="CTransModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="increase" property="increase" />
+		 <columnOverride column="trans" property="trans" />
+		 <columnOverride column="time" property="time" />
+    </table>
+
+	<table schema="public" tableName="daily" domainObjectName="DailyModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="open" property="open" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="high" property="high" />
+		 <columnOverride column="low" property="low" />
+		 <columnOverride column="clmn" property="clmn" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="avg20" property="avg20" />
+    </table>
+    
+	<table schema="public" tableName="daily_rate" domainObjectName="DailyRateModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="a" property="a" />
+		 <columnOverride column="b" property="b" />
+		 <columnOverride column="r" property="r" />
+		 <columnOverride column="date" property="date" />
+    </table>
+
+	<table schema="public" tableName="director" domainObjectName="DirectorModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="price" property="price" />
+		 <columnOverride column="type" property="type" />
+		 <columnOverride column="level" property="level" />
+		 <columnOverride column="flag" property="flag" />
+		 <columnOverride column="total" property="total" />
+		 <columnOverride column="arrow" property="arrow" />
+    </table>
+
+	<table schema="public" tableName="history" domainObjectName="HistoryModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="ftime" property="ftime" />
+		 <columnOverride column="ltime" property="ltime" />
+		 <columnOverride column="record" property="record" />
+		 <columnOverride column="type" property="type" />
+    </table>
+
+	<table schema="public" tableName="holder" domainObjectName="HolderModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="trans" property="trans" />
+		 <columnOverride column="signal" property="signal" />
+		 <columnOverride column="ascrate" property="ascrate" />
+		 <columnOverride column="descrate" property="descrate" />
+		 <columnOverride column="equalrate" property="equalrate" />
+    </table>
+
+	<table schema="public" tableName="weak" domainObjectName="WeakModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="trans" property="trans" />
+		 <columnOverride column="signal" property="signal" />
+		 <columnOverride column="ascrate" property="ascrate" />
+		 <columnOverride column="descrate" property="descrate" />
+		 <columnOverride column="equalrate" property="equalrate" />
+    </table>
+    
+    <table schema="public" tableName="indexrecord" domainObjectName="IndexrecordModel">
+         <columnOverride column="id" property="id" />
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="close" property="close" />
+		 <columnOverride column="open" property="open" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="high" property="high" />
+		 <columnOverride column="low" property="low" />
+		 <columnOverride column="clmn" property="clmn" />
+		 <columnOverride column="money" property="money" />
+		 <columnOverride column="avg" property="avg" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="flag" property="flag" />
+    </table>
+
+	<table schema="public" tableName="inspect" domainObjectName="InspectModel">
+         <columnOverride column="id" property="id" />
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="type" property="type" />
+		 <columnOverride column="opt" property="opt" />
+		 <columnOverride column="value" property="value" />
+		 <columnOverride column="create_date" property="createDate" />
+		 <columnOverride column="flag" property="flag" />
+    </table>
+
+	<table schema="public" tableName="message" domainObjectName="MessageModel">
+         <columnOverride column="id" property="id" />
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="message" property="message" />
+		 <columnOverride column="flag" property="flag" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="updatetime" property="updatetime" />
+    </table>
+
+	<table schema="public" tableName="mincolumn" domainObjectName="MincolumnModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="date" property="date" />
+    </table>
+    
+    <table schema="public" tableName="pay_result" domainObjectName="PayResultModel">
+         <columnOverride column="orderId" property="orderId" />
+		 <columnOverride column="appId" property="appId" />
+		 <columnOverride column="userId" property="userId" />
+		 <columnOverride column="payType" property="payType" />
+		 <columnOverride column="resultCode" property="resultCode" />
+		 <columnOverride column="resultString" property="resultString" />
+		 <columnOverride column="tradeId" property="tradeId" />
+		 <columnOverride column="amount" property="amount" />
+		 <columnOverride column="payTime" property="payTime" />
+		 <columnOverride column="sign" property="sign" />
+		 <columnOverride column="comment" property="comment" />
+    </table>
+
+	<table schema="public" tableName="sign" domainObjectName="SignModel">
+         <columnOverride column="code" property="code" />
+		 <columnOverride column="sell" property="sell" />
+		 <columnOverride column="buy" property="buy" />
+		 <columnOverride column="prefBuy" property="prefBuy" />
+		 <columnOverride column="prefSell" property="prefSell" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="high" property="high" />
+		 <columnOverride column="low" property="low" />
+		 <columnOverride column="avg" property="avg" />
+		 <columnOverride column="concept" property="concept" />
+    </table>
+	
+	<table schema="public" tableName="stockaction" domainObjectName="StockactionModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="action" property="action" />
+		 <columnOverride column="ftime" property="ftime" />
+		 <columnOverride column="ltime" property="ltime" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="queue" property="queue" />
+		 <columnOverride column="gw" property="gw" />
+		 <columnOverride column="type" property="type" />
+		 <columnOverride column="content" property="content" />
+		 <columnOverride column="detail" property="detail" />
+		 <columnOverride column="flag" property="flag" />
+		 <columnOverride column="arrow" property="arrow" />
+		 <columnOverride column="pref" property="pref" />
+		 <columnOverride column="pref1" property="pref1" />
+		 <columnOverride column="strong" property="strong" />
+		 <columnOverride column="dex" property="dex" />
+    </table>
+
+	<table schema="public" tableName="stockdaily" domainObjectName="StockdailyModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="close" property="close" />
+		 <columnOverride column="open" property="open" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="high" property="high" />
+		 <columnOverride column="low" property="low" />
+		 <columnOverride column="clmn" property="clmn" />
+		 <columnOverride column="money" property="money" />
+		 <columnOverride column="avg" property="avg" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="flag" property="flag" />
+    </table>
+
+	<table schema="public" tableName="stockrecord" domainObjectName="StockrecordModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="name" property="name" />
+		 <columnOverride column="close" property="close" />
+		 <columnOverride column="open" property="open" />
+		 <columnOverride column="current" property="current" />
+		 <columnOverride column="high" property="high" />
+		 <columnOverride column="low" property="low" />
+		 <columnOverride column="clmn" property="clmn" />
+		 <columnOverride column="money" property="money" />
+		 <columnOverride column="avg" property="avg" />
+		 <columnOverride column="date" property="date" />
+		 <columnOverride column="time" property="time" />
+		 <columnOverride column="flag" property="flag" />
+    </table>
+
+	<table schema="public" tableName="ting20" domainObjectName="Ting20Model">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="code" property="code" />
+		 <columnOverride column="count" property="count" />
+		 <columnOverride column="date" property="date" />
+    </table>
+
+	<table schema="public" tableName="version" domainObjectName="VersionModel">
+         <columnOverride column="id" property="id" />
+		 <columnOverride column="ver" property="ver" />
+		 <columnOverride column="bcheck" property="bcheck" />
+		 <columnOverride column="title" property="title" />
+		 <columnOverride column="content" property="content" />
+		 <columnOverride column="url" property="url" />
+		 <columnOverride column="type" property="type" />
+		 <columnOverride column="extra" property="extra" />
+    </table>
+    
+  </context>
+</generatorConfiguration>
