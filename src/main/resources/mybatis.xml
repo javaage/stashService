@@ -10,19 +10,32 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<package name="com.ge.predix.booking.mapper" />
 	</typeAliases>
 	<mappers>
-		<!-- 
-		<mapper resource="com/ge/predix/booking/mapper/RoleModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/UserModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/BookingModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/LogModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/RegionModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/RoleMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/RegionMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/SettingModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/BookingMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/UserMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/RelationModelMapper.xml" />
-		<mapper resource="com/ge/predix/booking/mapper/RegionMapper.xml" />
-		 -->
+		<mapper resource="com/stash/mapper/AllStockModelMapper.xml" />
+		<mapper resource="com/stash/mapper/AttendModelMapper.xml" />
+		<mapper resource="com/stash/mapper/BkrecordModelMapper.xml" />
+		<mapper resource="com/stash/mapper/BkTransModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CandRateModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CandTransModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CategoryModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CollectModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CrecordModelMapper.xml" />
+		<mapper resource="com/stash/mapper/CTransModelMapper.xml" />
+		<mapper resource="com/stash/mapper/DailyModelMapper.xml" />
+		<mapper resource="com/stash/mapper/DailyRateModelMapper.xml" />
+		<mapper resource="com/stash/mapper/DirectorModelMapper.xml" />
+		<mapper resource="com/stash/mapper/HistoryModelMapper.xml" />
+		<mapper resource="com/stash/mapper/HolderModelMapper.xml" />
+		<mapper resource="com/stash/mapper/IndexrecordModelMapper.xml" />
+		<mapper resource="com/stash/mapper/InspectModelMapper.xml" />
+		<mapper resource="com/stash/mapper/MessageModelMapper.xml" />
+		<mapper resource="com/stash/mapper/MincolumnModelMapper.xml" />
+		<mapper resource="com/stash/mapper/PayResultModelMapper.xml" />
+		<mapper resource="com/stash/mapper/SignModelMapper.xml" />
+		<mapper resource="com/stash/mapper/StockactionModelMapper.xml" />
+		<mapper resource="com/stash/mapper/StockdailyModelMapper.xml" />
+		<mapper resource="com/stash/mapper/StockrecordModelMapper.xml" />
+		<mapper resource="com/stash/mapper/Ting20ModelMapper.xml" />
+		<mapper resource="com/stash/mapper/VersionModelMapper.xml" />
+		<mapper resource="com/stash/mapper/WeakModelMapper.xml" />
 	</mappers>
 </configuration>

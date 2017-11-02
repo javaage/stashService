@@ -31,6 +31,7 @@
     </table>
 
     <table schema="public" tableName="bkrecord" domainObjectName="BkrecordModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('bkrecord_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		  <columnOverride column="code" property="code" />
 		  <columnOverride column="name" property="name" />
@@ -40,6 +41,7 @@
     </table>
 
 	<table schema="public" tableName="bk_trans" domainObjectName="BkTransModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('bk_trans_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -49,12 +51,14 @@
     </table>
 
 	<table schema="public" tableName="candidate" domainObjectName="BkTransModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('candidate_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="preflist" property="preflist" />
 		 <columnOverride column="time" property="time" />
     </table>
 
 	<table schema="public" tableName="cand_rate" domainObjectName="CandRateModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('cand_rate_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -67,6 +71,7 @@
     </table>
 
 	<table schema="public" tableName="cand_trans" domainObjectName="CandTransModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('cand_trans_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -91,6 +96,7 @@
     </table>
 
 	<table schema="public" tableName="crecord" domainObjectName="CrecordModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('crecord_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -100,6 +106,7 @@
     </table>
 
 	<table schema="public" tableName="c_trans" domainObjectName="CTransModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('c_trans_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -109,6 +116,7 @@
     </table>
 
 	<table schema="public" tableName="daily" domainObjectName="DailyModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('daily_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="open" property="open" />
@@ -121,6 +129,7 @@
     </table>
     
 	<table schema="public" tableName="daily_rate" domainObjectName="DailyRateModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('daily_rate_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="a" property="a" />
@@ -130,6 +139,7 @@
     </table>
 
 	<table schema="public" tableName="director" domainObjectName="DirectorModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('director_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="time" property="time" />
@@ -142,6 +152,7 @@
     </table>
 
 	<table schema="public" tableName="history" domainObjectName="HistoryModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('history_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="ftime" property="ftime" />
 		 <columnOverride column="ltime" property="ltime" />
@@ -172,6 +183,7 @@
     </table>
     
     <table schema="public" tableName="indexrecord" domainObjectName="IndexrecordModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('indexrecord_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
          <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -189,6 +201,7 @@
     </table>
 
 	<table schema="public" tableName="inspect" domainObjectName="InspectModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('inspect_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
          <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -200,6 +213,7 @@
     </table>
 
 	<table schema="public" tableName="message" domainObjectName="MessageModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('message_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
          <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -242,6 +256,7 @@
     </table>
 	
 	<table schema="public" tableName="stockaction" domainObjectName="StockactionModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('stockaction_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="action" property="action" />
 		 <columnOverride column="ftime" property="ftime" />
@@ -261,6 +276,7 @@
     </table>
 
 	<table schema="public" tableName="stockdaily" domainObjectName="StockdailyModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('stockdaily_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -278,6 +294,7 @@
     </table>
 
 	<table schema="public" tableName="stockrecord" domainObjectName="StockrecordModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('stockrecord_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="name" property="name" />
@@ -295,6 +312,7 @@
     </table>
 
 	<table schema="public" tableName="ting20" domainObjectName="Ting20Model">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('ting20_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="code" property="code" />
 		 <columnOverride column="count" property="count" />
@@ -302,6 +320,7 @@
     </table>
 
 	<table schema="public" tableName="version" domainObjectName="VersionModel">
+    	<generatedKey column="id" sqlStatement="SELECT nextval('version_id_seq')" identity="true"/>
          <columnOverride column="id" property="id" />
 		 <columnOverride column="ver" property="ver" />
 		 <columnOverride column="bcheck" property="bcheck" />
